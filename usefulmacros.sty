@@ -1,0 +1,74 @@
+\ProvidesPackage{usefulmacros}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath, amssymb, amsfonts, mathtools, setspace, enumitem, fancyhdr, titlesec, accents}
+\usepackage[paperwidth=21cm, paperheight=29.7cm, left=72pt, right=72pt, top=72pt, bottom=72pt]{geometry}
+\usepackage[dvipsnames]{xcolor}
+% \usepackage{tikz}
+\linespread{1.478}
+% set colour theme
+\def\colourTheme{teal}
+
+% frames
+\usepackage[framemethod=tikz]{mdframed}
+\newenvironment{scp}[1][\unskip]{
+    \begin{mdframed}[linecolor=\colourTheme, linewidth=0.5mm, leftline=true, rightline=false, topline=false, bottomline=false]
+}
+{
+    \end{mdframed}\medskip
+}
+\newcommand{\boldcolor}[2]{\textbf{\textcolor{#1}{#2}}}
+\newcommand{\tp}[1]{\textbf{\textcolor{\colourTheme}{#1}}}
+
+% macros
+\def\real#1{\mathbb{R}^#1}
+\def\inverse#1{#1^{-1}}
+\def\dpartial#1#2{\dfrac{\partial#1}{\partial#2}}
+\def\Vhrulefill{\leavevmode\leaders\hrule height 0.7ex depth \dimexpr0.4pt-0.7ex\hfill\kern0pt}
+\def\uvec#1{\underaccent{\tilde}{#1}}
+\def\setreal{\mathbb{R}}
+\def\setcomplex{\mathbb{C}}
+\def\setinteger{\mathbb{Z}}
+\def\setnatural{\mathbb{N}}
+\def\setrational{\mathbb{Q}}
+\def\expected{\mathrm{E}}
+\DeclareMathOperator{\ident}{id}
+\DeclareMathOperator{\image}{im}
+\DeclareMathOperator{\linalgspan}{span}
+\DeclareMathOperator{\bias}{bias}
+\DeclareMathOperator{\variance}{var}
+\DeclareMathOperator{\expectation}{E}
+\DeclareMathOperator{\mse}{MSE}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\nullity}{nullity}
+\DeclareMathOperator{\aut}{Aut}
+\DeclarePairedDelimiter\innerproduct{\langle}{\rangle}
+\DeclarePairedDelimiter\parens{(}{)}
+\DeclarePairedDelimiter\braces{\{}{\}}
+\DeclarePairedDelimiter\p{(}{)}
+\DeclarePairedDelimiter\sqbra{[}{]}
+\DeclarePairedDelimiter\sq{[}{]}
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}
+\DeclarePairedDelimiter\absb{|}{|}
+\DeclarePairedDelimiter\generator{\langle}{\rangle}
+\DeclareMathOperator{\grad}{grad}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\divergence}{div}
+\DeclareMathOperator{\curl}{curl}
+\DeclareMathOperator{\interior}{Int}
+\DeclareMathOperator{\cplxReal}{Re}
+\DeclareMathOperator{\cplxIm}{Im}
+\DeclareMathOperator{\proj}{proj}
+\DeclareMathOperator{\stab}{stab}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\def\boundary#1{\partial#1}
+\def\closure#1{\overline{#1}}
+\def\bv#1{\mathbf{#1}}
+\newcommand{\GL}{\mathit{GL}}
+\newcommand{\SLgroup}{\mathit{SL}} %\sl used for slanted
+\newcommand{\SO}{\mathit{SO}}
+\newcommand{\Cg}{\mathit{Cg}}
+\newcommand{\AO}{\mathit{AO}}
+\newcommand{\isomorphic}{\cong}
+\newcommand{\compose}{\mathbin{\circ}}
+\newcommand{\startproof}{{\color{\colourTheme}\textit{Proof. }}}
